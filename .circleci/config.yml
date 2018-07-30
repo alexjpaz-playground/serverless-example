@@ -35,7 +35,7 @@ jobs:
         
       # run tests!
       - run: yarn test
-      - run: npm serverless
+      - run: npm i serverless
       - run:
             command: |
               echo $(openssl aes-256-cbc -d -in .circleci/keys.enc -k $KEY) > $BASH_ENV

@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": ""
+    "test": "mocha 'src/**/*.spec.js'"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

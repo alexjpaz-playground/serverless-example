@@ -4,10 +4,11 @@
 #
 workflows:
   version: 2
-  my-workflow:
+  main:
     jobs:
      - build:
         context: "aws.amazon.com/alexjpaz/circleci"
+
         docker:
           # specify the version you desire here
           - image: circleci/node:7.10

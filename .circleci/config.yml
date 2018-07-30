@@ -23,11 +23,13 @@ jobs:
     docker:
       - image: circleci/node:7.10
     steps:
+      - checkout
       - run: yarn test
   deploy:
     docker:
       - image: circleci/node:7.10
     steps:
+      - checkout
       - run: npm i serverless
       - run: node_modules/.bin/serverless deploy -v
 
@@ -38,8 +40,8 @@ workflows:
       - build
       - test:
           requires:
-            build
+            - build
       - deploy:
             context: "aws.amazon.com/alexjpaz/circleci"
             requires:
-              test
+              - test

@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
- - build:
+  build:
     context: "aws.amazon.com/alexjpaz/circleci"
 
     docker:

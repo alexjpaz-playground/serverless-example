@@ -37,7 +37,6 @@ jobs:
       - run: yarn test
       - run: npm i serverless
       - run:
+            context: "aws.amazon.com/alexjpaz/circleci"
             command: |
-              echo $(openssl aes-256-cbc -d -in .circleci/keys.enc -k $KEY) > $BASH_ENV
-              source $BASH_ENV
               node_modules/.bin/serverless deploy -v

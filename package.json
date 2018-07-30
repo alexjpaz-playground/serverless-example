@@ -1,0 +1,15 @@
+{
+  "name": "@alexjpaz/serverless-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alexjpaz-playground/serverless-example.git",
+  "author": "Alexander Paz <alexjpaz@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": ""
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}

@@ -36,6 +36,10 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test
+      - test:
+          requires:
+            build
       - deploy:
             context: "aws.amazon.com/alexjpaz/circleci"
+            requires:
+              test

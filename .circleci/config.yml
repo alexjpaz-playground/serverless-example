@@ -4,8 +4,8 @@
 #
 version: 2
 jobs:
-  context: "aws.amazon.com/alexjpaz/circleci"
   build:
+    context: "aws.amazon.com/alexjpaz/circleci"
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10

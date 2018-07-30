@@ -35,4 +35,9 @@ jobs:
         
       # run tests!
       - run: yarn test
-      - run: "npm i -g serverless && serverless deploy -v"
+      - run: npm serverless
+      - run:
+            command: |
+              echo $(openssl aes-256-cbc -d -in .circleci/keys.enc -k $KEY) > $BASH_ENV
+              source $BASH_ENV
+              node_modules/.bin/serverless deploy -v

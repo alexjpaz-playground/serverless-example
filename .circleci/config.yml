@@ -4,6 +4,7 @@
 #
 version: 2
 jobs:
+  context: "aws.amazon.com/alexjpaz/circleci"
   build:
     docker:
       # specify the version you desire here
@@ -16,7 +17,6 @@ jobs:
 
     working_directory: ~/repo
 
-    context: "aws.amazon.com/alexjpaz/circleci"
 
     steps:
       - checkout
